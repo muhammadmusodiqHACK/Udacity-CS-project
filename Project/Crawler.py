@@ -1,5 +1,5 @@
 __author__ = 'Raphael'
-
+import urllib2
 def getLink(page):
     """
     Soumaya and Frank
@@ -26,7 +26,8 @@ def get_page(url):
     :rtype : html conten of paget
     :param url of page to return:
     """
-    return url
+    response = urllib2.urlopen(url)
+    return response.read()
 
 def crawl_web(seed):
     """
